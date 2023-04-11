@@ -3,13 +3,12 @@ import styled from "styled-components";
 import {useNavigate} from "react-router-dom";
 function Button(props) {
 
-    // const navigate=useNavigate();
+    const navigate=useNavigate();
     return(
-        // <Wrapper
-        //     onClick={()=> {
-        //         navigate('/shot');
-        //     }}>
-        <Wrapper>
+        <Wrapper
+            onClick={()=> {
+                navigate('/shot');
+            }}>
             {`${props.text}`}
         </Wrapper>
     )
