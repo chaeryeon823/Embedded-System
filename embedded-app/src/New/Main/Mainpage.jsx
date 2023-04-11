@@ -1,15 +1,24 @@
 import styled, { keyframes } from "styled-components";
-import Title from "./Title";
+import Title from "./TitleText";
+import Card from "./Card";
+
 function MainPage(props) {
 
     return (
         <Wrapper>
             {/* <p style={styles.p}>안녕하세요, 테마 변경이 가능한 웹사이트입니다.</p> */}
-            <Title></Title>
+            <TitleText>
+                <Title></Title>
+            </TitleText>
+
+            <Card></Card>
         </Wrapper>
     )
 }
-
+const TitleText=styled.div`
+    position:absolute;
+    top:30%;
+`;
 const slide = keyframes`
     from {
         background-position: 0 0;
@@ -19,12 +28,6 @@ const slide = keyframes`
         background-position: -120px 60px;
     }
 `;
-// const styles = {
-//     p : {
-//         margin: "0px",
-//         color: "red",
-//     }
-// }
 
 const Wrapper=styled.body`
     width:100vw;
@@ -50,6 +53,11 @@ const Wrapper=styled.body`
     background-size: 60px 60px;
     background-position: 0 0;
     animation: ${slide} 4s infinite linear;
+
+
+    display:flex;
+    justify-content: center;
+    // align-items: center;
 `;
 
 export default MainPage;
