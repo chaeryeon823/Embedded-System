@@ -1,8 +1,14 @@
 import React from "react";
 import styled from "styled-components";
-
+import {useNavigate} from "react-router-dom";
 function Button(props) {
+
+    // const navigate=useNavigate();
     return(
+        // <Wrapper
+        //     onClick={()=> {
+        //         navigate('/shot');
+        //     }}>
         <Wrapper>
             {`${props.text}`}
         </Wrapper>
