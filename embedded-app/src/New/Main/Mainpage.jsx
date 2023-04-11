@@ -10,7 +10,6 @@ function MainPage(props) {
             <TitleText>
                 <Title></Title>
             </TitleText>
-
             <Card></Card>
         </Wrapper>
     )
