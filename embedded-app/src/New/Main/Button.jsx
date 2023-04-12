@@ -5,7 +5,7 @@ import {useNavigate} from "react-router-dom";
 function Button(props) {
 
     const navigate=useNavigate();
-    const {text, radius, page,} = props;
+    const {text, radius, page, margin} = props;
 
     const navClick = () => {
         if(page === 'login') {
@@ -19,7 +19,7 @@ function Button(props) {
     return(
         <Wrapper
             onClick={navClick}
-            style={{borderRadius:radius || "0px",}}>
+            style={{borderRadius:radius || "0px", marginBottom:margin || "0px"}}>
             {`${text}`} 
             
         </Wrapper>
@@ -47,6 +47,6 @@ const Wrapper=styled.button`
         transform: translate(0, 0);
     }
 
-    border-radius: ${props => props.radius || '0px'};
+    // border-radius: ${props => props.radius || '0px'};
 `;
 export default Button;

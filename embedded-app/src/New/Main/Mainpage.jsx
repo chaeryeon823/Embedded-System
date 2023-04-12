@@ -10,13 +10,11 @@ function MainPage(props) {
             <TitleText>
                 <Title></Title>
             </TitleText>
-            <Card></Card>
+            <Card>
+            </Card>
             <DetailText>
                 <Text>임베디드 시스템 02분반</Text>
                 <Text>202001814 이지영  202001757 강채련  202001794 안나영</Text>
-                {/* <Text>Embedded Stytem</Text>
-                <Text>React ha gi si ro</Text>
-                <Text>202001757 Kang Chae Ryeon</Text> */}
             </DetailText>
         </Wrapper>
     )

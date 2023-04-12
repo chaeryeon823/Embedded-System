@@ -35,11 +35,8 @@ const Wrapper=styled.div`
 const Text=styled.p`
     margin:0;
     font-family: 'Press Start 2P', cursive;
-
     margin-bottom:30px;
-
     animation: ${blink} 1s step-end infinite;
-
 `;
 
 const Input=styled.input`
