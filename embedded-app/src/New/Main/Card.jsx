@@ -5,16 +5,14 @@ import Button from "./Button";
 function Card(props) {
     return(
         <Wrapper>
-            <Message>
-
-            </Message>
-            <Button text="Start!"></Button>
+            <Message text="Look at this fancy pop-up"></Message>
+            <Button text="Start!" page="login"></Button>
         </Wrapper>
     )
 
 }
 
-const Wrapper=styled.body`
+const Wrapper=styled.div`
     position: absolute;
     left: 50%;
     top: 60%;

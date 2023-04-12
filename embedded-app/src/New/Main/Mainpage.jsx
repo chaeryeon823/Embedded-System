@@ -11,9 +11,33 @@ function MainPage(props) {
                 <Title></Title>
             </TitleText>
             <Card></Card>
+            <DetailText>
+                <Text>임베디드 시스템 02분반</Text>
+                <Text>202001814 이지영  202001757 강채련  202001794 안나영</Text>
+                {/* <Text>Embedded Stytem</Text>
+                <Text>React ha gi si ro</Text>
+                <Text>202001757 Kang Chae Ryeon</Text> */}
+            </DetailText>
         </Wrapper>
     )
 }
+const DetailText=styled.div`
+    position:absolute;
+    font-family: 'Noto Sans KR', sans-serif;
+    // font-family: 'Press Start 2P', cursive;
+    font-weight: bold;
+    top: 75%;
+
+    display:flex;
+    align-items:center;
+    flex-direction:column;
+    
+
+`;
+const Text=styled.p`
+    margin:4px;
+
+`;
 const TitleText=styled.div`
     position:absolute;
     top:30%;
@@ -28,7 +52,7 @@ const slide = keyframes`
     }
 `;
 
-const Wrapper=styled.body`
+const Wrapper=styled.div`
     width:100vw;
     height:100vh;
     color:black;

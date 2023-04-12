@@ -1,21 +1,16 @@
 import React from "react";
 import styled from "styled-components";
-import ID from "./ID";
+
 function Shotpage(props) {
     return(
         <Wrapper>
-            <ID>
-
-            </ID>
+            shotpage 입니다.
         </Wrapper>
     )
 }
 
-const Wrapper=styled.body`
-    background-color:#ffd966;
-    width:100vw;
-    height:100vh;
-`
+const Wrapper=styled.div`
+`;
 
 
 export default Shotpage;

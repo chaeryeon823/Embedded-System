@@ -27,14 +27,16 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import MainPage from "./New/Main/Mainpage";
-import ShotPage from "./New/Shot/Shotpage";
+import Loginpage from "./New/Login/Loginpage";
+import Shotpage from "./New/Shot/Shotpage";
 
 function App(props) {
   return(
     <BrowserRouter>
       <Routes>
-        <Route index element={<MainPage />}/>
-        <Route path="shot" element={<ShotPage />}/>
+        <Route  index element={<MainPage />}/>
+        <Route path="login" element={<Loginpage />}/>
+        <Route path="shot" element={<Shotpage />}/>
       </Routes>
     </BrowserRouter>
   )
