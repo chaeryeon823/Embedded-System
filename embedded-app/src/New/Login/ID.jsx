@@ -16,7 +16,7 @@ const blink=keyframes`
     50% {
         opacity:0;
     }
-`
+`;
 const Wrapper=styled.div`
     display:flex;
     flex-direction: column;

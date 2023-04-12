@@ -6,11 +6,22 @@ function Button(props) {
 
     const navigate=useNavigate();
     const {text, radius, page,} = props;
+
+    const navClick = () => {
+        if(page === 'login') {
+            navigate(`/login`);
+        }
+        else if(page === 'shot') {
+            navigate(`/shot`);
+        }
+    }
+
+
+
+
     return(
         <Wrapper
-            onClick={()=> {
-                navigate('/'+ `${page}`);
-            }}
+            onClick={navClick}
             style={{borderRadius:radius || "0px",}}>
             {`${text}`} 
             
@@ -18,7 +29,9 @@ function Button(props) {
     )
 }
 
-
+// onClick={()=> {
+//     navigate(`/`+`${page}`);
+// }}
 const Wrapper=styled.button`
     color:inherit;
     font-family:inherit;
