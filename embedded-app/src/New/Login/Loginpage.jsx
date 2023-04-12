@@ -4,9 +4,7 @@ import ID from "./ID";
 function Loginpage(props) {
     return(
         <Wrapper>
-            <ID>
-
-            </ID>
+            <ID></ID>
         </Wrapper>
     )
 }

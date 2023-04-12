@@ -16,9 +16,6 @@ function Button(props) {
         }
     }
 
-
-
-
     return(
         <Wrapper
             onClick={navClick}
@@ -28,10 +25,6 @@ function Button(props) {
         </Wrapper>
     )
 }
-
-// onClick={()=> {
-//     navigate(`/`+`${page}`);
-// }}
 const Wrapper=styled.button`
     color:inherit;
     font-family:inherit;
