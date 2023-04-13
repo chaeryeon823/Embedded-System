@@ -11,7 +11,7 @@ function Shotpage(props) {
                 <TimeText> 00:00</TimeText>
                 <ShotCard></ShotCard>
                 <Button text="Restart!!" radius="5px" page="login" margin="1rem" ></Button>
-                <Button text="Ranking!!" radius="5px" page="login" ></Button>
+                <Button text="Ranking!!" radius="5px" page="ranking" ></Button>
             </Content>
         </Wrapper>
     )

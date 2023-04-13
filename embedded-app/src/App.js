@@ -29,6 +29,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import MainPage from "./New/Main/Mainpage";
 import Loginpage from "./New/Login/Loginpage";
 import Shotpage from "./New/Shot/Shotpage";
+import Rankingpage from "./New/Ranking/Rankingpage";
 
 function App(props) {
   return(
@@ -37,6 +38,7 @@ function App(props) {
         <Route  index element={<MainPage />}/>
         <Route path="login" element={<Loginpage />}/>
         <Route path="shot" element={<Shotpage />}/>
+        <Route path="ranking" element={<Rankingpage />}></Route>
       </Routes>
     </BrowserRouter>
   )

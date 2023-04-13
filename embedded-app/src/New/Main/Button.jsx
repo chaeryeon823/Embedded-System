@@ -14,6 +14,9 @@ function Button(props) {
         else if(page === 'shot') {
             navigate(`/shot`);
         }
+        else if(page === 'ranking') {
+            navigate(`/ranking`);
+        }
     }
 
     return(

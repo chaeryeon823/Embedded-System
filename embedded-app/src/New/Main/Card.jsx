@@ -5,7 +5,7 @@ import Button from "./Button";
 function Card(props) {
     return(
         <Wrapper>
-            <Message text="Look at this fancy pop-up"></Message>
+            <Message text="Press Start Button"></Message>
             <Button text="Start!" page="login"></Button>
         </Wrapper>
     )
