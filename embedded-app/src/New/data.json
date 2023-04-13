@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "rank": "1",
+        "name": "chaeryeon",
+        "score": "999"
+    },
+    {
+        "id": 2,
+        "rank": "2",
+        "name": "seungkwan",
+        "score": "999"
+    },
+    {
+        "id": 3,
+        "rank": "3",
+        "name": "hoshi",
+        "score": "999"
+    },
+    {
+        "id": 4,
+        "rank": "4",
+        "name": "dk",
+        "score": "999"
+    },
+    {
+        "id": 5,
+        "rank": "5",
+        "name": "jiyoung",
+        "score": "999"
+    },
+    {
+        "id": 6,
+        "rank": "6",
+        "name": "nayoung",
+        "score": "999"
+    },
+    {
+        "id": 7,
+        "rank": "7",
+        "name": "jeonghan",
+        "score": "999"
+    }
+]
