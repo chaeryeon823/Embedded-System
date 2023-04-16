@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import RankingListItem from "./RankingListItem";
 
 function RankingList(props) {
     return(
