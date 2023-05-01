@@ -30,6 +30,7 @@ import MainPage from "./New/Main/Mainpage";
 import Loginpage from "./New/Login/Loginpage";
 import Shotpage from "./New/Shot/Shotpage";
 import Rankingpage from "./New/Ranking/Rankingpage";
+import TimeOutPage from "./New/TimeOut/TimeOutPage";
 
 function App(props) {
   return(
@@ -39,6 +40,7 @@ function App(props) {
         <Route path="login" element={<Loginpage />}/>
         <Route path="shot" element={<Shotpage />}/>
         <Route path="ranking" element={<Rankingpage />}></Route>
+        <Route path="timeout" element={<TimeOutPage />}></Route>
       </Routes>
     </BrowserRouter>
   )

@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import ShotCard from "./ShotCard";
-import Button from "../Main/Button";
+// import Button from "../Main/Button";
 function Shotpage(props) {
     return(
         <Wrapper>
@@ -10,8 +10,8 @@ function Shotpage(props) {
                 <Text>hit the target</Text>
                 <TimeText> 00:00</TimeText>
                 <ShotCard></ShotCard>
-                <Button text="Restart!!" radius="5px" page="login" margin="1rem" ></Button>
-                <Button text="Ranking!!" radius="5px" page="ranking" ></Button>
+                {/* <Button text="Restart!!" radius="5px" page="login" margin="1rem" ></Button>
+                <Button text="Ranking!!" radius="5px" page="ranking" ></Button> */}
             </Content>
         </Wrapper>
     )
@@ -25,7 +25,7 @@ const TimeText=styled.div`
     margin:0;
     font-family: 'Press Start 2P', cursive;
     font-size:1.25rem;
-    margin-bottom: 0.625rem;
+    margin-bottom: 1rem;
 
     
 `;
