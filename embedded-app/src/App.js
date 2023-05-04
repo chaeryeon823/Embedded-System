@@ -31,7 +31,7 @@ import Loginpage from "./New/Login/Loginpage";
 import Shotpage from "./New/Shot/Shotpage";
 import Rankingpage from "./New/Ranking/Rankingpage";
 import TimeOutPage from "./New/TimeOut/TimeOutPage";
-
+import Test from "./New/TimeOut/Test";
 function App(props) {
   return(
     <BrowserRouter>
@@ -41,6 +41,7 @@ function App(props) {
         <Route path="shot" element={<Shotpage />}/>
         <Route path="ranking" element={<Rankingpage />}></Route>
         <Route path="timeout" element={<TimeOutPage />}></Route>
+        <Route path="test" element={<Test />}></Route>
       </Routes>
     </BrowserRouter>
   )

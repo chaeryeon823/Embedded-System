@@ -8,7 +8,7 @@ function Shotpage(props) {
             <Content>
                 <IDText>Chaeryeon</IDText>
                 <Text>hit the target</Text>
-                <TimeText> 00:00</TimeText>
+                <TimeText>60</TimeText>
                 <ShotCard></ShotCard>
                 {/* <Button text="Restart!!" radius="5px" page="login" margin="1rem" ></Button>
                 <Button text="Ranking!!" radius="5px" page="ranking" ></Button> */}
