@@ -3,14 +3,14 @@ import styled from "styled-components";
 import ShotCard from "./ShotCard";
 // import Button from "../Main/Button";
 function Shotpage(props) {
-    const [time, setTime] = useState(5);
+    const [time, setTime] = useState(60);
     useEffect(()=> {
         time > 0 && setTimeout(() => setTime(time - 1), 1000);
     }, [time]);
     return(
         <Wrapper>
             <Content>
-                <IDText>Chaeryeon</IDText>
+                <IDText>test</IDText>
                 <Text>hit the target</Text>
                 {/* <TimeText>{time ? time : <p style={{fontFamily: 'Noto Sans KR', padding:'0px', margin: '0px'}}>카운트 다운 종료</p>}</TimeText> */}
                 <TimeText>{time}</TimeText>
