@@ -1,17 +1,37 @@
-import React from "react";
+import axios from 'axios';
+import React, { useEffect, useState } from 'react';
 import styled from "styled-components";
 // import data from "../data.json";
-
+function User({ user }) {
+    return (
+      <RankingList>
+        <b>{user.num}   </b><b>{user.name}</b> <span>({user.score})</span>
+      </RankingList>
+    );
+}
 function Rankingpage(props) {
+    const [myUser ,setUser] = useState([])
+        useEffect(() => {
+            axios.get('/api/hello6')
+            .then(response => setUser(response.data))
+            .catch(error => console.log(error))
+        }, []);
+
     return(
         <Wrapper>
             <Content>
                 <Text>RANKING</Text>
+                {myUser.map((user) => (
+                    <User user={user} key={user.num} />
+                ))}
             </Content>
         </Wrapper>
 
     )
 }
+const RankingList=styled.div`
+    color:red;
+`
 const Wrapper=styled.div`
     background-color:#ffd966;
     width:100vw;
