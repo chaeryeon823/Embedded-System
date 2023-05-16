@@ -8,6 +8,29 @@ function User({ user }) {
     </div>
   );
 }
+
+
+function RankingTest(props) {
+  const [myUser ,setUser] = useState([])
+
+    useEffect(() => {
+      axios.get('/api/hello6')
+      .then(response => setUser(response.data))
+      .catch(error => console.log(error))
+    }, []);
+  return (
+    <div>
+      {myUser.map((user) => (
+        <User user={user} key={user.num} />
+      ))}
+      <p>뭘봐</p>
+    </div>
+  );
+}
+
+export default RankingTest;
+
+
 // const users = [
 //     {
 //         id: 1,
@@ -35,23 +58,3 @@ function User({ user }) {
 //         score: 95
 //     }
 //   ];
-
-function RankingTest() {
-  const [myUser ,setUser] = useState('')
-
-    useEffect(() => {
-      axios.get('/api/hello6')
-      .then((response) => setUser(response.data))
-      .catch(error => console.log(error))
-    }, []);
-  return (
-    <div>
-      {myUser.map((user) => (
-        <User user={user} key={user.num} />
-      ))}
-      <p>뭘봐</p>
-    </div>
-  );
-}
-
-export default RankingTest;
