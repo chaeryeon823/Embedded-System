@@ -7,12 +7,12 @@ function Button(props) {
     const navigate=useNavigate();
     const {text, radius, page, margin} = props;
 
-    const navClick = () => {
+    const navClick = (e) => {
         if(page === 'login') {
             navigate(`/login`);
         }
         else if(page === 'shot') {
-            navigate(`/shot`);
+            navigate(`/shot`,{state: e.target.value});
         }
         else if(page === 'ranking') {
             navigate(`/ranking`);
@@ -24,7 +24,6 @@ function Button(props) {
             onClick={navClick}
             style={{borderRadius:radius || "0px", marginBottom:margin || "0px"}}>
             {`${text}`} 
-            
         </Wrapper>
     )
 }

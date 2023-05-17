@@ -1,16 +1,48 @@
-import React from "react";
 import styled, { keyframes } from "styled-components";
 import Button from "../Main/Button";
-
+import { useState } from "react";
+import axios from "axios";
 function ID(props) {
+
+    const [name, setName] = useState('');
+
+    const formSubit = async(e) => {
+        e.preventDefault();
+
+        await axios.post("/api/hello7", name, {headers: {
+            'Content-Type': 'text/plain; charset=UTF-8'
+        }})
+        .then((res) => {
+            console.log(res.data)
+        })
+        .catch((err) => {
+            console.log(err)
+        })
+    }
+
+    const nameChange = (e) => {
+        setName(e.target.value);
+    }
+
+
     return(
         <Wrapper>
             <Text>type your ID!</Text>
-            <Input></Input>
-            <Button text="Login!!" radius="5px" page="shot"></Button>
+            <LoginForm onSubmit={formSubit}>
+                <Input name="name" value={name} onChange={nameChange} placeholder="ID"></Input>
+                <Button type="submit" text="Login!!" radius="5px"></Button>
+            </LoginForm>
+            <Button text="Start!!" radius="5px" page="shot"></Button>
         </Wrapper>
     )
 }
+
+const LoginForm=styled.form`
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1rem;
+`;
 
 const blink=keyframes`
     50% {

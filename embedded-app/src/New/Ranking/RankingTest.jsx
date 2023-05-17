@@ -11,7 +11,7 @@ function User({ user }) {
 
 
 function RankingTest(props) {
-  const [myUser ,setUser] = useState([])
+  const [myUser ,setUser] = useState([]);
 
     useEffect(() => {
       axios.get('/api/hello6')

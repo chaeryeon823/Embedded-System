@@ -1,19 +1,24 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import ShotCard from "./ShotCard";
+// import { useLocation } from "react-router-dom";
 // import Button from "../Main/Button";
 function Shotpage(props) {
-    const [time, setTime] = useState(60);
+    const [time, setTime] = useState(3);
     useEffect(()=> {
         time > 0 && setTimeout(() => setTime(time - 1), 1000);
     }, [time]);
+    // const Edit = () => {
+    //     const {state} = useLocation();
+    //     console.log(state);
+    // }
     return(
         <Wrapper>
             <Content>
                 <IDText>test</IDText>
                 <Text>hit the target</Text>
-                {/* <TimeText>{time ? time : <p style={{fontFamily: 'Noto Sans KR', padding:'0px', margin: '0px'}}>카운트 다운 종료</p>}</TimeText> */}
-                <TimeText>{time}</TimeText>
+                <TimeText>{time ? time : <p style={{fontFamily: 'Press Start 2P', padding:'0px', margin: '0px', color:'#F94A29'}}>TIME OVER!!</p>}</TimeText>
+                {/* <TimeText>{time}</TimeText> */}
                 <ShotCard></ShotCard>
                 {/* <Button text="Restart!!" radius="5px" page="login" margin="1rem" ></Button>
                 <Button text="Ranking!!" radius="5px" page="ranking" ></Button> */}
