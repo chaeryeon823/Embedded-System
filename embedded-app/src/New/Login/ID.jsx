@@ -29,10 +29,10 @@ function ID(props) {
         <Wrapper>
             <Text>type your ID!</Text>
             <LoginForm onSubmit={formSubit}>
-                <Input name="name" value={name} onChange={nameChange} placeholder="ID"></Input>
+                <Input name="name" value={name} onChange={nameChange}></Input>
                 <Button type="submit" text="Login!!" radius="5px"></Button>
             </LoginForm>
-            <Button text="Start!!" radius="5px" page="shot"></Button>
+            <Button text="Start!!" radius="5px" page="shot" data={name}></Button>
         </Wrapper>
     )
 }

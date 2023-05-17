@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import ShotCard from "./ShotCard";
+import { useLocation } from "react-router-dom";
 // import { useLocation } from "react-router-dom";
 // import Button from "../Main/Button";
 function Shotpage(props) {
@@ -12,10 +13,12 @@ function Shotpage(props) {
     //     const {state} = useLocation();
     //     console.log(state);
     // }
+    const location = useLocation();
+    const number = location.state.value;
     return(
         <Wrapper>
             <Content>
-                <IDText>test</IDText>
+                <IDText>{number}</IDText>
                 <Text>hit the target</Text>
                 <TimeText>{time ? time : <p style={{fontFamily: 'Press Start 2P', padding:'0px', margin: '0px', color:'#F94A29'}}>TIME OVER!!</p>}</TimeText>
                 {/* <TimeText>{time}</TimeText> */}

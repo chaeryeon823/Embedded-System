@@ -1,7 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import ID from "./ID";
-function Loginpage(props) {
+function Loginpage() {
+
     return(
         <Wrapper>
             <ID></ID>

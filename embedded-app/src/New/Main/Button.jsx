@@ -5,14 +5,15 @@ import {useNavigate} from "react-router-dom";
 function Button(props) {
 
     const navigate=useNavigate();
-    const {text, radius, page, margin} = props;
+    const {text, radius, page, margin, data} = props;
 
     const navClick = (e) => {
         if(page === 'login') {
             navigate(`/login`);
         }
         else if(page === 'shot') {
-            navigate(`/shot`,{state: e.target.value});
+            navigate(`/shot`, {state: {value: data}});
+            console.log(data);
         }
         else if(page === 'ranking') {
             navigate(`/ranking`);
