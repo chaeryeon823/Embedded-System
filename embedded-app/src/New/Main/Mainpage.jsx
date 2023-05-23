@@ -6,7 +6,6 @@ function MainPage(props) {
 
     return (
         <Wrapper>
-            {/* <p style={styles.p}>안녕하세요, 테마 변경이 가능한 웹사이트입니다.</p> */}
             <TitleText>
                 <Title></Title>
             </TitleText>

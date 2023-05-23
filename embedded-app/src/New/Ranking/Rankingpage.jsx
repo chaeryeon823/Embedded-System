@@ -1,18 +1,31 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import styled from "styled-components";
+import Button from '../Main/Button';
 // import data from "../data.json";
 function User({ user }) {
+    console.log("ssss")
+    console.log(user)
     return (
       <RankingList>
-        <b>{user.num}   </b><b>{user.name}</b> <span>({user.score})</span>
+        {/* <b>{user.num}   </b><b>{user.name}</b> <span>({user.score})</span> */}
+        {/* <p>{user.id}</p> */}
+        <p>{user.id}</p>
+        <p>({user.score})</p>
       </RankingList>
     );
 }
 function Rankingpage(props) {
     const [myUser ,setUser] = useState([])
         useEffect(() => {
-            axios.get('/api/hello6')
+
+            const data = {
+                "target": 1
+              }
+        
+              const config = {"Content-Type": 'application/json'};
+        
+            axios.post('/web/rank', data, config)
             .then(response => setUser(response.data))
             .catch(error => console.log(error))
         }, []);
@@ -24,18 +37,37 @@ function Rankingpage(props) {
                 {myUser.map((user) => (
                     <User user={user} key={user.num} />
                 ))}
+                <Button text="Restart!!" radius="5px" page="login" margin="1rem" ></Button>
+
             </Content>
         </Wrapper>
 
     )
 }
 const RankingList=styled.div`
-    color:red;
+    width: auto;
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 3rem;
+    border: 3px solid black;
+    border-radius: 5px;
+    background: white;
+    box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.2);
+    margin-bottom: 1rem;
+
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.9rem;
 `
 const Wrapper=styled.div`
     background-color:#ffd966;
     width:100vw;
     height:100vh;
+
+    display:flex;
+    flex-direction: column;
+    align-items: center;
 `
 const Content=styled.div`
     display:flex;
@@ -51,6 +83,7 @@ const Text=styled.p`
     margin:0;
     font-family: 'Press Start 2P', cursive;
     font-size:1.25rem;
+    margin-bottom: 1rem;
 
 
 `

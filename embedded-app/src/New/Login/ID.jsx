@@ -5,13 +5,16 @@ import axios from "axios";
 function ID(props) {
 
     const [name, setName] = useState('');
-
     const formSubit = async(e) => {
         e.preventDefault();
 
-        await axios.post("/api/hello7", name, {headers: {
-            'Content-Type': 'text/plain; charset=UTF-8'
-        }})
+        const data = {
+            'id': name,
+            'target': 1
+        }
+        const config = {"Content-Type": 'application/json'};
+
+        await axios.post("/web/login", data, config)
         .then((res) => {
             console.log(res.data)
         })
