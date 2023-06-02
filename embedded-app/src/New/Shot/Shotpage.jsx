@@ -17,7 +17,7 @@ function Shotpage(props) {
             setTime(time => time -1);
         }, 1000);
         if(time === 0) {
-            console.log(time);
+            // console.log(time);
             axios.post('/web/end', 
                 {
                     id: name, 

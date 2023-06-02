@@ -10,13 +10,14 @@ function User({ user }) {
       <RankingList>
         {/* <b>{user.num}   </b><b>{user.name}</b> <span>({user.score})</span> */}
         {/* <p>{user.id}</p> */}
+        <p>{user.rank}</p>
         <p>{user.id}</p>
         <p>({user.score})</p>
       </RankingList>
     );
 }
 function Rankingpage(props) {
-    const [myUser ,setUser] = useState([])
+    const [myUser ,setUser] = useState([]);
         useEffect(() => {
 
             const data = {
@@ -26,8 +27,9 @@ function Rankingpage(props) {
               const config = {"Content-Type": 'application/json'};
         
             axios.post('/web/rank', data, config)
-            .then(response => setUser(response.data))
+            .then(response => setUser(response.data)) 
             .catch(error => console.log(error))
+            
         }, []);
 
     return(
@@ -37,6 +39,7 @@ function Rankingpage(props) {
                 {myUser.map((user) => (
                     <User user={user} key={user.num} />
                 ))}
+                <Area></Area>
                 <Button text="Restart!!" radius="5px" page="login" margin="1rem" ></Button>
 
             </Content>
@@ -44,8 +47,12 @@ function Rankingpage(props) {
 
     )
 }
+const Area=styled.div`
+    width:15rem;
+`
 const RankingList=styled.div`
-    width: auto;
+    /*width: auto;*/
+    width: 15rem;
     display: inline-flex;
     flex-direction: row;
     align-items: center;
@@ -55,7 +62,7 @@ const RankingList=styled.div`
     border-radius: 5px;
     background: white;
     box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.2);
-    margin-bottom: 1rem;
+    margin-bottom: 1.25rem;
 
     font-family: 'Press Start 2P', cursive;
     font-size: 0.9rem;

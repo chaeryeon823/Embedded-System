@@ -6,32 +6,34 @@ import axios from "axios";
 function ShotCard(props) {
     const [time, setTime] = useState(0);
     const {name} = props;
+    const [score, setScore] = useState(0);
     useEffect(() => {
         const id = setInterval(() => {
             setTime(time => time +1);
-            console.log("hi");
+            console.log(time);
             axios.post('/web/score', 
-                {
-                    id: name, 
-                    target: 1
-                }
+            {
+                id: name, 
+                target: 1
+            }
             )
             .then(function (response) {
-                console.log(response.data['score']);
+                setScore(response.data['score']);
+                console.log(score);
             })
             .catch(function (error) {
                 console.log(error);
             });
-            clearInterval(id);
-
         }, 500);
-        
+        if(time === 12) {
+            clearInterval(id);
+        }
         return () => clearInterval(id);
-    }, [time, name]);
+    }, [time, name, score]);
     return(
         <Wrapper>
             <Message text="SCORE"></Message>
-            <Text>999</Text>
+            <Text>{score}</Text>
         </Wrapper>
     )
 }
